@@ -12,6 +12,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+  /* IMAGE ANIMATION */
+.animate-img{
+  opacity:0;
+  transform:translateY(30px);
+  animation:imgFade 1s ease forwards;
+}
+
+@keyframes imgFade{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* HOVER EFFECT */
+.animate-img:hover{
+  transform:scale(1.05);
+  transition:0.4s;
+}
+
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#f8f9fa;color:#333}
 
@@ -107,12 +127,12 @@ clean rooms, and warm hospitality for business and family travelers.
 <h2 class="title">radhika regency</h2>
 <div class="rooms">
 <div class="card">
-<img src="front.jpg">
+<img src="front.jpg" class="animate-img">
 <h3>front</h3>
 <p>Spacious, comfortable & well-maintained rooms.</p>
 </div>
 <div class="card">
-<img src="reception.jpg">
+<img src="reception.jpg" class="animate-img">
 <h3>our reception</h3>
 <p>Ideal for business & premium stay.</p>
 </div>
@@ -122,10 +142,10 @@ clean rooms, and warm hospitality for business and family travelers.
 <section>
 <h2 class="title">Gallery</h2>
 <div class="gallery">
-<img src="room1.jpg">
-<img src="room2.jpg">
-<img src="front.jpg">
-<img src="reception.jpg">
+<img src="room1.jpg" class="animate-img">
+<img src="room2.jpg" class="animate-img">
+<img src="front.jpg" class="animate-img">
+<img src="reception.jpg" class="animate-img">
 </div>
 </section>
 
