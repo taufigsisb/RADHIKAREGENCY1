@@ -2,294 +2,151 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hotel Radhika Regency | Rourkela</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Radhika Regency</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #f5f5f5;
-  color: #333;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f8f9fa;color:#333}
+
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1566073771259-6a8506099945") center/cover no-repeat;
+display:flex;align-items:center;justify-content:center;
+text-align:center;color:#fff;
+animation:fade 1.5s ease;
 }
 
-h1,h2,h3 {
-  font-family: 'Playfair Display', serif;
+header h1{font-size:3rem}
+header p{margin:15px 0;font-size:1.2rem}
+
+.btns a{
+display:inline-block;margin:10px;
+padding:12px 25px;border-radius:30px;
+color:#fff;text-decoration:none;font-weight:600;
+transition:.3s;
+}
+.whatsapp{background:#25D366}
+.email{background:#007BFF}
+.btns a:hover{transform:scale(1.08)}
+
+section{padding:60px 10%}
+.title{text-align:center;margin-bottom:40px;font-size:2rem}
+
+.about, .rooms, .amenities{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-/* HERO */
-.hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  url("https://images.unsplash.com/photo-1566073771259-6a8506099945");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.card{
+background:#fff;padding:20px;border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.4s;
+}
+.card:hover{transform:translateY(-10px)}
+
+.card img{
+width:100%;border-radius:12px;height:200px;object-fit:cover;
 }
 
-.hero h1 {
-  font-size: 48px;
+.gallery{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+.gallery img{width:100%;border-radius:12px;transition:.4s}
+.gallery img:hover{transform:scale(1.05)}
+
+.amenities i{font-size:30px;color:#007BFF;margin-bottom:10px}
+
+iframe{width:100%;height:350px;border-radius:15px;border:none}
+
+footer{
+background:#111;color:#fff;text-align:center;padding:25px;margin-top:40px
 }
 
-.hero p {
-  font-size: 20px;
-}
-
-/* BOOKING */
-.booking-section {
-  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.booking-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.book-btn {
-  padding: 15px 30px;
-  border-radius: 50px;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  color: white;
-  transition: 0.3s;
-}
-
-.call { background: linear-gradient(45deg,#ff512f,#dd2476); }
-.email { background: linear-gradient(45deg,#2193b0,#6dd5ed); }
-.whatsapp { background: linear-gradient(45deg,#25D366,#128C7E); }
-
-.book-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* SECTION */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* ROOMS */
-.rooms {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
-}
-
-.room-card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-.room-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 10px;
-}
-
-.gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* FEATURES */
-.features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 20px;
-}
-
-/* FOOTER */
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 30px;
+@keyframes fade{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
 }
 </style>
-  <style>
-/* ===== ANIMATIONS ===== */
-
-/* Fade in from bottom */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hero text animation */
-.hero h1, .hero p {
-  animation: heroFade 1.5s ease forwards;
-}
-
-@keyframes heroFade {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Room card hover */
-.room-card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.room-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
-/* Gallery hover */
-.gallery img {
-  transition: transform 0.4s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.08);
-}
-
-/* Button pulse */
-.book-btn {
-  animation: pulse 2.5s infinite;
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
-  70% { box-shadow: 0 0 0 15px rgba(255,255,255,0); }
-  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
-}
-  </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero-section fade-up">
-  <div>
-    <h1>Hotel Radhika Regency</h1>
-    <p>Comfort • Hospitality • Prime Location in Rourkela</p>
-  </div>
+<header>
+<div>
+<h1>Hotel Radhika Regency</h1>
+<p>Comfort • Cleanliness • Convenience</p>
+<div class="btns">
+<a class="whatsapp" href="https://wa.me/919439784547" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp Booking
+</a>
+<a class="email" href="radhikaregency@gmail.com">
+<i class="fa-solid fa-envelope"></i> Email Booking
+</a>
+</div>
+</div>
+</header>
+
+<section>
+<h2 class="title">About Our Hotel</h2>
+<p style="text-align:center;max-width:800px;margin:auto">
+Hotel Radhika Regency offers a comfortable stay with modern amenities,
+clean rooms, and warm hospitality for business and family travelers.
+</p>
 </section>
 
-<!-- BOOKING -->
-<section class="booking-section fade-up">
-  <h2>Book Your Stay</h2>
-  <div class="booking-buttons">
-    <a href="tel:+919439784547"><button class="book-btn call">📞 Call Now</button></a>
-    <a href="mailto:radhikaregency@gmail.com"><button class="book-btn email">📧 Email</button></a>
-    <a href="https://wa.me/919439784547" target="_blank"><button class="book-btn whatsapp">💬 WhatsApp</button></a>
-  </div>
+<section>
+<h2 class="title">Our Rooms</h2>
+<div class="rooms">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+<h3>Deluxe Room</h3>
+<p>Spacious, comfortable & well-maintained rooms.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1560448075-bb485b067938">
+<h3>Executive Room</h3>
+<p>Ideal for business & premium stay.</p>
+</div>
+</div>
 </section>
 
-<!-- ABOUT -->
-<section class="section fade-up"">
-  <h2>About Us</h2>
-  <p>Hotel Radhika Regency is a premium 3-star hotel in Rourkela offering modern rooms, excellent service, and a comfortable stay for business and leisure travellers.</p>
+<section>
+<h2 class="title">Gallery</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1551776235-dde6d4829808">
+<img src="https://images.unsplash.com/photo-1560067174-8941c1f9c7c0">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39">
+</div>
 </section>
 
-<!-- ROOMS -->
-<section class="section fade-up"">
-  <h2>Our Rooms</h2>
-  <div class="rooms">
-    <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-      <h3>Deluxe Room</h3>
-      <p>Comfortable AC room with modern facilities.</p>
-    </div>
-
-    <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32">
-      <h3>Executive Room</h3>
-      <p>Spacious room ideal for business travellers.</p>
-    </div>
-
-    <div class="room-card">
-      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-      <h3>Suite Room</h3>
-      <p>Luxury stay with premium amenities.</p>
-    </div>
-  </div>
+<section>
+<h2 class="title">Amenities</h2>
+<div class="amenities">
+<div class="card"><i class="fa-solid fa-wifi"></i><p>Free Wi-Fi</p></div>
+<div class="card"><i class="fa-solid fa-square-parking"></i><p>Parking</p></div>
+<div class="card"><i class="fa-solid fa-bell-concierge"></i><p>24×7 Reception</p></div>
+<div class="card"><i class="fa-solid fa-utensils"></i><p>Restaurant</p></div>
+</div>
 </section>
 
-<!-- GALLERY -->
-<section class="sectionfade-up"">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1560448075-bb485b067938">
-    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
-    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267">
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="section fade-up"">
-  <h2>Amenities</h2>
-  <div class="features">
-    <p>✔ Free Wi-Fi</p>
-    <p>✔ AC Rooms</p>
-    <p>✔ Restaurant</p>
-    <p>✔ Gym</p>
-    <p>✔ Free Parking</p>
-    <p>✔ 24×7 Room Service</p>
-  </div>
-</section>
-
-<!-- MAP -->
-<section class="section fade-up"">
-  <h2>Our Location</h2>
-  <iframe src="https://www.google.com/maps?q=Hotel+Radhika+Regency+Rourkela&output=embed"
-    width="100%" height="300" style="border:0;" loading="lazy"></iframe>
+<section>
+<h2 class="title">Location</h2>
+<iframe src="https://www.google.com/maps?q=hotel+radhika+regency&output=embed"></iframe>
 </section>
 
 <footer>
-  <p>📍 Bisra Road, Udit Nagar, Rourkela, Odisha</p>
-  <p>📞 +91 9439784547 | 📧 radhikaregency@gmail.com</p>
+<p>© 2025 Hotel Radhika Regency | All Rights Reserved</p>
 </footer>
-<script>
-const elements = document.querySelectorAll('.fade-up');
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-}, { threshold: 0.2 });
-
-elements.forEach(el => observer.observe(el));
-</script>
 </body>
 </html>
